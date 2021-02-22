@@ -74,6 +74,10 @@ public class FetchPlugin extends CordovaPlugin {
 		     if(method.equals("PATCH")) {
 			requestBuilder.patch(RequestBody.create(MediaType.parse(contentType), postBody.toString()));
 		     }
+			
+		     if(method.equals("PUT")) {
+			requestBuilder.put(RequestBody.create(MediaType.parse(contentType), postBody.toString()));
+		     }
                 } else {
                     requestBuilder.method(method, null);
                 }
